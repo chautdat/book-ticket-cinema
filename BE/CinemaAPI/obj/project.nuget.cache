@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "AlSkQYuCRWM=",
+  "success": true,
+  "projectFilePath": "/Users/chautandat/DoAn/CCPTMT/book-ticket-cinema/BE/CinemaAPI/CinemaAPI.csproj",
+  "expectedPackageFiles": [
+    "/Users/chautandat/.nuget/packages/microsoft.aspnetcore.openapi/9.0.14/microsoft.aspnetcore.openapi.9.0.14.nupkg.sha512",
+    "/Users/chautandat/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
