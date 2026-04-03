@@ -1,8 +1,6 @@
 ﻿using cinema.Models;                    // Import model Movie
 using cinema.Services;                  // Import service chứa nghiệp vụ liên quan đến Movie
 using Microsoft.AspNetCore.Mvc;          // Cung cấp Controller và attribute cho API
-using Twilio.Types;                      // (Unused) có thể dùng cho số điện thoại nếu gửi notification SMS
-using Twilio;                            // (Unused) SDK Twilio, thư viện chưa được dùng ở đây
 using cinema.Helpers;                    // Chứa các helper chung như FileHelper
 using Microsoft.AspNetCore.Hosting;      // Lấy thông tin môi trường hosting (đường dẫn wwwroot)
 using System.Diagnostics;                // (Unused) có thể dùng để logging, debug

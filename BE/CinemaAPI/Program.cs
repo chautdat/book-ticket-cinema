@@ -69,8 +69,6 @@ builder.Services.AddScoped<RoomService, RoomServiceImpl>();
 builder.Services.AddScoped<FollowService, FollowServiceImpl>();
 builder.Services.AddScoped<SeatService, SeatServiceImpl>();
 builder.Services.AddScoped<SubService, SubServiceImpl>();
-builder.Services.AddScoped<MailHelper>();
-builder.Services.AddScoped<SMSHelper>();
 builder.Services.AddHttpClient<TmdbMovieSyncService>();
 // builder.Services.AddHostedService<MyBackgroundService>(); // TẮT email thông báo lịch chiếu
 builder.Services.Configure<ZaloPayOptions>(builder.Configuration.GetSection("Payment:ZaloPay"));

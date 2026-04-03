@@ -4,9 +4,6 @@ using cinema.Services; // Import FollowService chứa logic nghiệp vụ
 using Microsoft.AspNetCore.Mvc; // Cung cấp Controller và attribute cho API
 using System; // Cho Exception và các kiểu cơ bản
 using System.Collections.Generic; // Cho List<>
-using Twilio; // SDK Twilio (nếu gửi notification qua SMS)
-using Twilio.Rest.Api.V2010.Account; // Cho REST resources của Twilio
-using Twilio.Types; // Định nghĩa các kiểu dữ liệu Twilio như PhoneNumber
 
 namespace cinema.Controllers
 {

@@ -4,9 +4,6 @@ using cinema.Services; // Service chứa logic thao tác với Cinema
 using Microsoft.AspNetCore.Mvc; // Cung cấp Controller, attribute cho API
 using System; // Cho Exception và các kiểu cơ bản
 using System.Collections.Generic; // Cho các collection như List<>
-using Twilio; // SDK Twilio để xác thực và gọi API Twilio (SMS, Voice)
-using Twilio.Rest.Api.V2010.Account; // Cho phép thao tác các tài nguyên SMS/Voice
-using Twilio.Types; // Định nghĩa các kiểu dữ liệu Twilio như PhoneNumber
 
 namespace cinema.Controllers
 {
