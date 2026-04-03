@@ -141,8 +141,7 @@ namespace cinema.Controllers
         // Tính năng gửi email đã tắt
         [HttpPost("sendMail")]
         [Produces("application/json")]
-        [Consumes("application/json")]
-        public IActionResult SendMail([FromBody] Email email)
+        public IActionResult SendMail()
         {
             return Ok(ApiResponse.Fail("Tính năng gửi thông báo đã tắt", false));
         }
