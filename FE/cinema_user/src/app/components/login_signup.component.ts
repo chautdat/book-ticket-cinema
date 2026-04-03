@@ -23,6 +23,7 @@ interface DecodedToken {
 }
 
 @Component({
+  standalone: false,
   template: `
 <section class="container-form forms">
     <div class="form login">

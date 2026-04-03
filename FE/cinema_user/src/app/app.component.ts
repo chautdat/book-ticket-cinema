@@ -16,6 +16,7 @@ interface AutoCompleteCompleteEvent {
 }
 
 @Component({
+  standalone: false,
   selector: 'app-root',
   template: `
 <!-- Main Container -->
@@ -255,10 +256,7 @@ interface AutoCompleteCompleteEvent {
   <!-- Back to Top (CSS only) -->
   <a href="#" class="back-to-top">
     <i class="fas fa-arrow-up"></i>
-  </a>
-
-  <app-chat></app-chat>
-</div>
+  </a></div>
 
 <p-toast></p-toast>
 
