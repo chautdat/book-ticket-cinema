@@ -59,7 +59,6 @@ builder.Services.AddDbContext<MyDbContext>(opts =>
 builder.Services.AddScoped<AccountService, AccountServiceImpl>();
 builder.Services.AddScoped<MovieService, MovieServiceImpl>();
 builder.Services.AddScoped<ShowTimeService, ShowTimeServiceImpl>();
-builder.Services.AddScoped<ComboService, ComboServiceImpl>();
 builder.Services.AddScoped<BookingService, BookingServiceImpl>();
 builder.Services.AddScoped<PaymentService, PaymentServiceImpl>();
 builder.Services.AddScoped<CinemaService, CinemaServiceImpl>();

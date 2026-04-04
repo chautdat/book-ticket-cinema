@@ -30,3 +30,4 @@
 /Users/chautandat/DoAn/CCPTMT/book-ticket-cinema/BE/CinemaAPI/obj/Debug/net9.0/CinemaAPI.pdb
 /Users/chautandat/DoAn/CCPTMT/book-ticket-cinema/BE/CinemaAPI/obj/Debug/net9.0/CinemaAPI.genruntimeconfig.cache
 /Users/chautandat/DoAn/CCPTMT/book-ticket-cinema/BE/CinemaAPI/obj/Debug/net9.0/ref/CinemaAPI.dll
+/Users/chautandat/DoAn/CCPTMT/book-ticket-cinema/BE/CinemaAPI/obj/Debug/net9.0/CinemaAPI.sourcelink.json

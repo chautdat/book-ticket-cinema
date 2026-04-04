@@ -141,19 +141,10 @@ namespace cinema.Controllers
         // Tính năng gửi email đã tắt
         [HttpPost("sendMail")]
         [Produces("application/json")]
-        public IActionResult SendMail()
+        [Consumes("application/json")]
+        public IActionResult SendMail([FromBody] Email email)
         {
             return Ok(ApiResponse.Fail("Tính năng gửi thông báo đã tắt", false));
-        }
-
-        // POST api/account/verify
-        // Tính năng xác thực đã tắt
-        [HttpPost("verify")]
-        [Produces("application/json")]
-        [Consumes("application/json")]
-        public IActionResult VerifyEmail([FromBody] VerifyEmailDto dto)
-        {
-            return Ok(ApiResponse.Success("Tính năng xác thực người dùng đã tắt"));
         }
 
         // PUT api/account/update
@@ -186,14 +177,6 @@ namespace cinema.Controllers
             {
                 return BadRequest(ApiResponse.Fail(ex.Message));
             }
-        }
-
-        // GET api/account/verify?email=...
-        // Tính năng xác minh tài khoản đã tắt
-        [HttpGet("verify")]
-        public IActionResult Verify([FromQuery] string email)
-        {
-            return Ok(ApiResponse.Success("Tính năng xác thực người dùng đã tắt"));
         }
 
         // GET api/account/findByEmail/{email}
