@@ -1,5 +1,4 @@
 ﻿using cinema.Models;                   // Import các model Booking và BookingDetail
-using Microsoft.AspNetCore.Http.HttpResults; // (Unused) có thể dùng cho kết quả HTTP
 
 namespace cinema.Services
 {
@@ -25,7 +24,7 @@ namespace cinema.Services
         }
 
         /// <summary>
-        /// Thêm các chi tiết (seat, combo) cho booking
+        /// Thêm các chi tiết seat cho booking
         /// </summary>
         public bool createBookingDetails(BookingDetail bookingDetail)
         {
@@ -47,13 +46,12 @@ namespace cinema.Services
                 Movie = b.Showtime.Movie.Title,       // Tiêu đề phim từ navigation property
                 Email = b.Email,
                 Phone = b.Phone,
-                CountTicket = b.BookingDetails.Count(), // Số ghế đã đặt
-                CountCombo = b.ComboDetails.Count()     // Số combo đã chọn
+                CountTicket = b.BookingDetails.Count() // Số ghế đã đặt
             }).ToList(); // Thực thi truy vấn và chuyển về list
         }
 
         /// <summary>
-        /// Lấy chi tiết một booking theo ID, bao gồm thông tin showtime, phòng, chi tiết ghế và combo
+        /// Lấy chi tiết một booking theo ID, bao gồm thông tin showtime, phòng và chi tiết ghế
         /// </summary>
         public dynamic findById(int id)
         {
@@ -68,9 +66,6 @@ namespace cinema.Services
                     Room = b.Showtime.Room.Name,              // Phòng chiếu
                     BookingDetails = b.BookingDetails
                         .Select(detail => new { Seat = detail.Seat.Name }) // Tên ghế
-                        .ToList(),
-                    ComboDetails = b.ComboDetails
-                        .Select(c => new { Combo = c.Combo.Name, Quantity = c.Quantity }) // Tên & số lượng combo
                         .ToList()
                 })
                 .FirstOrDefault(); // Lấy kết quả đầu tiên hoặc null
@@ -96,7 +91,7 @@ namespace cinema.Services
         }
 
         /// <summary>
-        /// Xóa booking theo ID, bao gồm cả các BookingDetails và ComboDetails liên quan
+        /// Xóa booking theo ID, bao gồm cả các BookingDetails liên quan
         /// </summary>
         public bool delete(int id)
         {
@@ -106,10 +101,6 @@ namespace cinema.Services
             // Xóa các BookingDetails liên quan
             var bookingDetails = db.BookingDetails.Where(bd => bd.BookingId == id).ToList();
             db.BookingDetails.RemoveRange(bookingDetails);
-
-            // Xóa các ComboDetails liên quan
-            var comboDetails = db.ComboDetails.Where(cd => cd.BookingId == id).ToList();
-            db.ComboDetails.RemoveRange(comboDetails);
 
             // Xóa booking chính
             db.Bookings.Remove(booking);

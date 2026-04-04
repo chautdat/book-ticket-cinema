@@ -21,8 +21,6 @@ public partial class Booking
 
     public virtual ICollection<BookingDetail> BookingDetails { get; set; } = new List<BookingDetail>();
 
-    public virtual ICollection<ComboDetail> ComboDetails { get; set; } = new List<ComboDetail>();
-
     public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
 
     public virtual Showtime Showtime { get; set; } = null!;
